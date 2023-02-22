@@ -1,0 +1,114 @@
+<!--
+    form.ejs
+    Final
+
+    Revision History
+        Boa Im, 2022.04.18: Created
+-->
+
+<%- include('layouts/header'); -%>
+
+    <body>
+        <header>
+            <h1>Boa Im / 8751777</h1>
+            <%- include('layouts/nav'); -%>
+        </header>
+
+        <!--Main Page-->
+        <div id="INPUT">
+            <form action="" method="post">
+                <div class="Border">
+                    <h2>Make your order!</h2>
+                    <p>NAME* : <input type="text" id="name" name="name"></p>
+                    <p>STUDENT ID*: <input type="text" id="studentid" name="studentid" placeholder="1234567"></p>
+                    <p>HTML5 BOOKS $62.99: <input type="text" id="html5" placeholder="Enter a number" name="html5"></p>
+                    <p>CSS3 BOOKS $51.99: <input type="text" id="css3" placeholder="Enter a number" name="css3"></p>
+                    <p>PENS $2.99: <input type="text" id="pen" placeholder="Enter a number" name="pen"></p>
+                    <input id="button" type="submit" value="SUBMIT">
+            </form>
+
+
+            <% if(typeof(errors) != 'undefined'){
+                for(var error of errors){ %>
+                <p class="errors">
+                    <%= error.msg %>
+                </p>
+                <%
+                }
+              }
+            %>
+                    </div>
+        </div>
+
+        <!--OUTPUT-->
+        <%
+      if(typeof(name) != 'undefined'){
+        %>
+            <div id="OUTPUT">
+                <div class="Border">
+
+                    <div>
+                        <p class="LEFT">NAME</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">
+                            <%= name %>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="LEFT">STUDENT ID</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">
+                            <%= studentid %>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="LEFT">HTML5 BOOKS</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">
+                            <%= html5 %>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="LEFT">CSS3 BOOKS</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">
+                            <%= css3 %>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="LEFT">PENS</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">
+                            <%= pen %>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="LEFT">SUBTOTAL</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">$
+                            <%= subtotal %>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="LEFT">TAX 13%</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">$
+                            <%= tax %>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="LEFT">TOTAL</p>
+                        <p class="MIDDLE">:</p>
+                        <p class="RIGHT">$
+                            <%= total %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <%
+      }
+    %>
+    </body>
+    <%- include('layouts/footer'); -%>
+
+        </html>

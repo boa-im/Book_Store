@@ -1,0 +1,65 @@
+<!--
+    allorders.ejs
+    Final
+
+    Revision History
+        Boa Im, 2022.04.18: Created
+-->
+
+<%- include('layouts/header'); -%>
+
+    <body>
+        <header>
+            <h1>Boa Im / 8751777</h1>
+            <%- include('layouts/nav'); -%>
+        </header>
+        <p>List of Orders:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>STUDENT ID</th>
+                    <th>HTML5 BOOKS</th>
+                    <th>CSS3 BOOKS</th>
+                    <th>PENS</th>
+                    <th>SUB TOTAL</th>
+                    <th>TAX</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var order of orders){ %>
+                    <tr>
+                        <td>
+                            <%= order.name %>
+                        </td>
+                        <td>
+                            <%= order.studentid %>
+                        </td>
+                        <td>
+                            <%= order.html5 %>
+                        </td>
+                        <td>
+                            <%= order.css3 %>
+                        </td>
+                        <td>
+                            <%= order.pen %>
+                        </td>
+                        <td>
+                            $
+                            <%= order.subtotal %>
+                        </td>
+                        <td>
+                            $
+                            <%= order.tax %>
+                        </td>
+                        <td>
+                            $
+                            <%= order.total %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <%- include('layouts/footer'); -%>
+    </body>

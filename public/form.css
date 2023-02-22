@@ -1,0 +1,159 @@
+/*
+ *   form.css
+ *   Final
+ *
+ *   Revision History
+ *      Boa Im, 2022.04.18: Created
+*/
+
+
+/*For all part*/
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Border {
+    border: solid 1px black;
+    padding: 20px 40px 20px 40px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+h1,
+.Border {
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 30px 0px;
+    text-decoration: underline;
+}
+
+strong {
+    float: right;
+}
+
+input,
+#province {
+    float: right;
+    width: 50%;
+}
+
+#button {
+    float: none;
+    margin: auto;
+    display: block;
+    font-size: 20px;
+    width: 50%;
+    margin-top: 40px;
+}
+
+
+/*For invoice part*/
+
+.LEFT,
+.MIDDLE,
+.RIGHT {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.LEFT {
+    width: 50%;
+    float: left;
+}
+
+.MIDDLE {
+    width: 5%;
+}
+
+.RIGHT {
+    width: 40%;
+    text-align: right;
+    float: right;
+}
+
+
+/*For nav bar*/
+
+.top_menu {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.top_menu ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+.top_menu ul li {
+    display: inline-block;
+    width: 130px;
+}
+
+.top_menu ul li:hover {
+    background-color: white;
+}
+
+.top_menu ul li a:hover {
+    color: black;
+}
+
+.top_menu ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+
+/*For table*/
+
+table,
+th,
+td {
+    border: solid 1px black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+table {
+    margin-top: 20px;
+}
+
+th {
+    height: 35px;
+}
+
+td {
+    height: 30px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/*For footer*/
+
+footer {
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center;
+    clear: left;
+}
