@@ -4,12 +4,6 @@
   <li>Build a <strong>Node.js</strong> web page that allows user to buy a number of books and view the receipt with subtotal, tax, and total price</li>
   <li>Save the information of buyer by checking server-side validation to <strong>MongoDB</strong> and show all orders from the database</li>
 </ul>
-<h5>How to run this code?</h5>
-<p>You should have visual studio installed C# and .NET
-  <br>Tool -> NuGet Package Manager -> NuGet Package Console
-  <br>In the <strong>NuGet Package Console</strong>, type 'update-database'
-  <br>Now, you can see the saved database in 'View -> SQL Server Object Explorer'</p>
-<br>
 
 <div>
   <h4>1. Main Page</h4>
